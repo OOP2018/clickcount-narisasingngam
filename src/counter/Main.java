@@ -40,8 +40,8 @@ public class Main extends Application {
 			
 			// Dependency Injection:
 			// Set the Counter object we want the view to update.
+			controller.setCounter(counter);
 			
-			//TODO set a reference to Counter in the controller
 
 			// Build and show the scene
 			Scene scene = new Scene(root);
@@ -53,6 +53,13 @@ public class Main extends Application {
 			e.printStackTrace();
 			return;
 		}
+		
+		ConsoleView view = new ConsoleView(counter);
+		counter.addObserver(view);
+		CounterView view2 = new CounterView(counter);
+		counter.addObserver(view2);
+		view2.run();
+		
 		
 		// Add an observer that displays the Counter value on console.
 		// Dependency Injection: 
