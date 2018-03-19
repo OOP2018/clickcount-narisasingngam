@@ -20,14 +20,13 @@ public class ClickController {
 	public void setCounter(Counter counter){
 		this.counter = counter;
 	}
+	
 	public void plusButtonHandler(ActionEvent event) {
 		counter.add(1);
-		System.out.println("TODO: add 1 to counter and delete this pritnln");
 	}
 	
 	
 	public void minusButtonHandler(ActionEvent event) {
 		counter.add(-1);
-		System.out.println("TODO: add -1 to counter and delete this pritnln");
 	}
 }

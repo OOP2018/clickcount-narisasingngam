@@ -1,6 +1,7 @@
 package counter;
 /**
  * A simple counter.
+ * @author Narisa Singngam
  */
 
 public class Counter extends java.util.Observable{
@@ -10,14 +11,15 @@ public class Counter extends java.util.Observable{
 		this.count = 0;
 	}
 	
+	/**
+	 * Add the time to count.
+	 * @param howmuch counting number.
+	 */
 	
 	public void add(int howmuch) {
 		
 		count += howmuch;
 	
-		//TODO notify the observers that the value has changed!
-		//TODO to minimize call-backs from the Observers, include
-		//TODO the new counter value as a parameter to notifyObserver().
 		// Its like if the Bank sends you an SMS whenever money
 		// is deposited in your account. If the SMS just says 
 		// "you received a deposit" then you need to login to check it.
